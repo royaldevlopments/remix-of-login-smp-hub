@@ -185,7 +185,7 @@ function Home() {
           <PixelHeading>HOW TO JOIN</PixelHeading>
           <div className="mt-6 grid gap-6 md:grid-cols-3">
             {steps.map((s) => (
-              <PixelPanel key={s.n}>
+              <PixelPanel key={s.n} className="pixel-lift">
                 <p className="text-pixel text-sm text-gold">{s.n}</p>
                 <h3 className="text-pixel mt-4 text-xs text-foreground">{s.title}</h3>
                 <p className="mt-3 text-muted-foreground">{s.body}</p>
@@ -195,15 +195,23 @@ function Home() {
           </div>
         </section>
 
-        <section className="grid gap-6 py-14 md:grid-cols-2">
-          {features.map((f) => (
-            <PixelPanel key={f.title}>
-              <f.icon className="size-8 text-primary" />
-              <h2 className="text-pixel mt-4 text-xs text-foreground md:text-sm">{f.title}</h2>
-              <p className="mt-3 text-muted-foreground">{f.body}</p>
-            </PixelPanel>
-          ))}
+        <section className="py-14">
+          <PixelHeading>WHY LOGIN SMP</PixelHeading>
+          <div className="mt-6 grid gap-6 md:grid-cols-2">
+            {features.map((f) => (
+              <PixelPanel key={f.title} className="pixel-lift flex gap-5">
+                <span className="pixel-inset flex size-14 shrink-0 items-center justify-center bg-secondary">
+                  <f.icon className="size-7 text-primary" />
+                </span>
+                <div>
+                  <h3 className="text-pixel text-xs text-foreground md:text-sm">{f.title}</h3>
+                  <p className="mt-3 text-muted-foreground">{f.body}</p>
+                </div>
+              </PixelPanel>
+            ))}
+          </div>
         </section>
+
 
         {featured.length > 0 && (
           <section className="py-8">
