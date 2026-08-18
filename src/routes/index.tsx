@@ -221,7 +221,7 @@ function Home() {
             </p>
             <div className="mt-6 grid gap-6 md:grid-cols-3">
               {featured.map((p) => (
-                <div key={p.id} className="pixel-border flex flex-col bg-card">
+                <div key={p.id} className="pixel-border pixel-lift flex flex-col bg-card">
                   {p.image_url ? (
                     <img
                       src={p.image_url}
