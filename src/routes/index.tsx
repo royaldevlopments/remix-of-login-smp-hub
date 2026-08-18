@@ -259,6 +259,19 @@ function Home() {
           </section>
         )}
 
+        <section className="py-8">
+          <PixelHeading>WHAT PLAYERS SAY</PixelHeading>
+          <div className="mt-6 grid gap-6 md:grid-cols-3">
+            {quotes.map((q) => (
+              <PixelPanel key={q.name} className="pixel-lift flex flex-col">
+                <p className="text-pixel text-[10px] text-gold">{"★★★★★"}</p>
+                <p className="mt-4 flex-1 text-muted-foreground">"{q.body}"</p>
+                <p className="text-pixel mt-5 text-[10px] text-accent">{q.name}</p>
+              </PixelPanel>
+            ))}
+          </div>
+        </section>
+
         <section className="pixel-border relative my-12 overflow-hidden bg-card text-center">
           <img
             src={caveBg}
@@ -270,13 +283,22 @@ function Home() {
             className="absolute inset-0 size-full object-cover opacity-40"
           />
           <div className="relative p-10">
-            <h2 className="text-pixel text-sm text-primary">READY TO PLAY?</h2>
+            <h2 className="text-pixel text-sm text-primary md:text-base">READY TO PLAY?</h2>
             <p className="mt-4 text-foreground">Add the IP and hop in — no whitelist.</p>
-            <div className="mt-5 flex justify-center">
+            <div className="mt-5 flex flex-wrap items-center justify-center gap-4">
               <ServerIp ip={ip} />
+              <a
+                href={discord}
+                target="_blank"
+                rel="noreferrer"
+                className="pixel-border pixel-lift text-pixel inline-flex h-12 items-center bg-discord px-5 text-[10px] text-discord-foreground"
+              >
+                JOIN DISCORD
+              </a>
             </div>
           </div>
         </section>
+
       </div>
     </div>
   );
