@@ -53,7 +53,14 @@ const features = [
   },
 ];
 
+const quotes = [
+  { name: "@BlockBuilderX", body: "Best SMP I've joined in years. Zero lag even during events." },
+  { name: "@RedstoneRani", body: "Staff replied to my grief ticket in 10 minutes and rolled it back." },
+  { name: "@NetherNomad", body: "Store rank landed in game instantly. Economy actually feels fair." },
+];
+
 const steps = [
+
   { n: "01", title: "Open Minecraft", body: "Java 1.21 or Bedrock — both worlds are connected." },
   { n: "02", title: "Add the server", body: "Multiplayer → Add Server → paste play.loginsmp.fun." },
   { n: "03", title: "Start building", body: "No whitelist, no application. Claim land and go." },
@@ -95,8 +102,14 @@ function Home() {
         <div className="absolute inset-0 bg-background/80" />
         <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-4 py-16 md:grid-cols-2 md:py-24">
           <div>
-            <p className="text-pixel text-[10px] text-accent">JAVA + BEDROCK · 1.21</p>
-            <PixelHeading as="h1" className="mt-4">
+            <div className="flex flex-wrap items-center gap-3">
+              <span className="pixel-border text-pixel inline-flex items-center gap-2 bg-card px-3 py-2 text-[10px] text-primary">
+                <span className="pixel-pulse size-2 bg-primary" />
+                SERVER ONLINE
+              </span>
+              <span className="text-pixel text-[10px] text-accent">JAVA + BEDROCK · 1.21</span>
+            </div>
+            <PixelHeading as="h1" className="mt-5">
               LOGIN SMP
             </PixelHeading>
             <p className="mt-5 max-w-lg text-xl text-muted-foreground">
@@ -105,19 +118,31 @@ function Home() {
             </p>
             <div className="mt-7 flex flex-wrap items-center gap-4">
               <ServerIp ip={ip} />
-              <Button asChild className="pixel-border text-pixel h-12 text-[10px]">
+              <Button asChild className="pixel-border pixel-lift text-pixel h-12 text-[10px]">
                 <Link to="/store">VISIT STORE</Link>
               </Button>
+              <a
+                href={discord}
+                target="_blank"
+                rel="noreferrer"
+                className="pixel-border pixel-lift text-pixel inline-flex h-12 items-center bg-discord px-5 text-[10px] text-discord-foreground"
+              >
+                DISCORD
+              </a>
             </div>
+            <p className="mt-6 text-muted-foreground">
+              No whitelist · No pay-to-win · Grief protected
+            </p>
           </div>
           <div className="flex justify-center">
             <img
               src={logo.url}
               alt="Login SMP crossed swords and shield logo"
-              className="w-64 drop-shadow-[8px_8px_0_rgba(0,0,0,0.5)] md:w-80"
+              className="pixel-float w-64 drop-shadow-[8px_8px_0_rgba(0,0,0,0.5)] md:w-80"
             />
           </div>
         </div>
+
       </section>
 
       <section aria-label="Server stats" className="border-b-4 border-border bg-card">
@@ -167,7 +192,7 @@ function Home() {
           <PixelHeading>HOW TO JOIN</PixelHeading>
           <div className="mt-6 grid gap-6 md:grid-cols-3">
             {steps.map((s) => (
-              <PixelPanel key={s.n}>
+              <PixelPanel key={s.n} className="pixel-lift">
                 <p className="text-pixel text-sm text-gold">{s.n}</p>
                 <h3 className="text-pixel mt-4 text-xs text-foreground">{s.title}</h3>
                 <p className="mt-3 text-muted-foreground">{s.body}</p>
@@ -177,15 +202,23 @@ function Home() {
           </div>
         </section>
 
-        <section className="grid gap-6 py-14 md:grid-cols-2">
-          {features.map((f) => (
-            <PixelPanel key={f.title}>
-              <f.icon className="size-8 text-primary" />
-              <h2 className="text-pixel mt-4 text-xs text-foreground md:text-sm">{f.title}</h2>
-              <p className="mt-3 text-muted-foreground">{f.body}</p>
-            </PixelPanel>
-          ))}
+        <section className="py-14">
+          <PixelHeading>WHY LOGIN SMP</PixelHeading>
+          <div className="mt-6 grid gap-6 md:grid-cols-2">
+            {features.map((f) => (
+              <PixelPanel key={f.title} className="pixel-lift flex gap-5">
+                <span className="pixel-inset flex size-14 shrink-0 items-center justify-center bg-secondary">
+                  <f.icon className="size-7 text-primary" />
+                </span>
+                <div>
+                  <h3 className="text-pixel text-xs text-foreground md:text-sm">{f.title}</h3>
+                  <p className="mt-3 text-muted-foreground">{f.body}</p>
+                </div>
+              </PixelPanel>
+            ))}
+          </div>
         </section>
+
 
         {featured.length > 0 && (
           <section className="py-8">
@@ -195,7 +228,7 @@ function Home() {
             </p>
             <div className="mt-6 grid gap-6 md:grid-cols-3">
               {featured.map((p) => (
-                <div key={p.id} className="pixel-border flex flex-col bg-card">
+                <div key={p.id} className="pixel-border pixel-lift flex flex-col bg-card">
                   {p.image_url ? (
                     <img
                       src={p.image_url}
@@ -233,6 +266,19 @@ function Home() {
           </section>
         )}
 
+        <section className="py-8">
+          <PixelHeading>WHAT PLAYERS SAY</PixelHeading>
+          <div className="mt-6 grid gap-6 md:grid-cols-3">
+            {quotes.map((q) => (
+              <PixelPanel key={q.name} className="pixel-lift flex flex-col">
+                <p className="text-pixel text-[10px] text-gold">{"★★★★★"}</p>
+                <p className="mt-4 flex-1 text-muted-foreground">"{q.body}"</p>
+                <p className="text-pixel mt-5 text-[10px] text-accent">{q.name}</p>
+              </PixelPanel>
+            ))}
+          </div>
+        </section>
+
         <section className="pixel-border relative my-12 overflow-hidden bg-card text-center">
           <img
             src={caveBg}
@@ -244,13 +290,22 @@ function Home() {
             className="absolute inset-0 size-full object-cover opacity-40"
           />
           <div className="relative p-10">
-            <h2 className="text-pixel text-sm text-primary">READY TO PLAY?</h2>
+            <h2 className="text-pixel text-sm text-primary md:text-base">READY TO PLAY?</h2>
             <p className="mt-4 text-foreground">Add the IP and hop in — no whitelist.</p>
-            <div className="mt-5 flex justify-center">
+            <div className="mt-5 flex flex-wrap items-center justify-center gap-4">
               <ServerIp ip={ip} />
+              <a
+                href={discord}
+                target="_blank"
+                rel="noreferrer"
+                className="pixel-border pixel-lift text-pixel inline-flex h-12 items-center bg-discord px-5 text-[10px] text-discord-foreground"
+              >
+                JOIN DISCORD
+              </a>
             </div>
           </div>
         </section>
+
       </div>
     </div>
   );

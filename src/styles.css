@@ -151,3 +151,45 @@
   font-family: var(--font-pixel);
   letter-spacing: 0.02em;
 }
+
+@utility pixel-lift {
+  transition:
+    transform 120ms steps(2),
+    box-shadow 120ms steps(2);
+  &:hover {
+    transform: translate(-3px, -3px);
+    box-shadow:
+      inset -4px -4px 0 0 color-mix(in oklab, black 35%, transparent),
+      inset 4px 4px 0 0 color-mix(in oklab, white 12%, transparent),
+      10px 10px 0 0 color-mix(in oklab, black 50%, transparent);
+  }
+}
+
+@keyframes pixel-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+@utility pixel-float {
+  animation: pixel-float 4s ease-in-out infinite;
+}
+
+@keyframes pixel-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+
+@utility pixel-pulse {
+  animation: pixel-pulse 1.6s steps(2) infinite;
+}
+
