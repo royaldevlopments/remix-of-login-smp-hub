@@ -53,7 +53,14 @@ const features = [
   },
 ];
 
+const quotes = [
+  { name: "@BlockBuilderX", body: "Best SMP I've joined in years. Zero lag even during events." },
+  { name: "@RedstoneRani", body: "Staff replied to my grief ticket in 10 minutes and rolled it back." },
+  { name: "@NetherNomad", body: "Store rank landed in game instantly. Economy actually feels fair." },
+];
+
 const steps = [
+
   { n: "01", title: "Open Minecraft", body: "Java 1.21 or Bedrock — both worlds are connected." },
   { n: "02", title: "Add the server", body: "Multiplayer → Add Server → paste play.loginsmp.fun." },
   { n: "03", title: "Start building", body: "No whitelist, no application. Claim land and go." },
