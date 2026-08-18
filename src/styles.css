@@ -1,0 +1,153 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/*
+ * Login SMP design system — Minecraft blocky style.
+ * Colors are oklch tokens. Never hardcode colors in components.
+ */
+
+@theme inline {
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+  --radius-2xl: 0px;
+  --radius-3xl: 0px;
+  --radius-4xl: 0px;
+  --font-pixel: "Press Start 2P", monospace;
+  --font-sans: "VT323", monospace;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-ring-offset-background: var(--background);
+  --color-dirt: var(--dirt);
+  --color-stone: var(--stone);
+  --color-diamond: var(--diamond);
+  --color-diamond-foreground: var(--diamond-foreground);
+  --color-gold: var(--gold);
+  --color-discord: var(--discord);
+  --color-discord-foreground: var(--discord-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 0px;
+  --background: oklch(0.19 0.02 260);
+  --foreground: oklch(0.95 0.01 250);
+  --card: oklch(0.25 0.02 260);
+  --card-foreground: oklch(0.95 0.01 250);
+  --popover: oklch(0.25 0.02 260);
+  --popover-foreground: oklch(0.95 0.01 250);
+  --primary: oklch(0.68 0.19 142);
+  --primary-foreground: oklch(0.16 0.03 150);
+  --secondary: oklch(0.33 0.02 260);
+  --secondary-foreground: oklch(0.95 0.01 250);
+  --muted: oklch(0.29 0.02 260);
+  --muted-foreground: oklch(0.72 0.02 255);
+  --accent: oklch(0.78 0.13 200);
+  --accent-foreground: oklch(0.18 0.04 220);
+  --destructive: oklch(0.6 0.22 25);
+  --destructive-foreground: oklch(0.97 0.01 250);
+  --border: oklch(0.42 0.02 260);
+  --input: oklch(0.3 0.02 260);
+  --ring: oklch(0.68 0.19 142);
+  --dirt: oklch(0.45 0.07 60);
+  --stone: oklch(0.55 0.01 260);
+  --diamond: oklch(0.82 0.13 197);
+  --diamond-foreground: oklch(0.2 0.05 220);
+  --gold: oklch(0.83 0.16 85);
+  --discord: oklch(0.58 0.19 275);
+  --discord-foreground: oklch(0.98 0.01 250);
+  --sidebar: oklch(0.22 0.02 260);
+  --sidebar-foreground: oklch(0.95 0.01 250);
+  --sidebar-primary: oklch(0.68 0.19 142);
+  --sidebar-primary-foreground: oklch(0.16 0.03 150);
+  --sidebar-accent: oklch(0.3 0.02 260);
+  --sidebar-accent-foreground: oklch(0.95 0.01 250);
+  --sidebar-border: oklch(0.42 0.02 260);
+  --sidebar-ring: oklch(0.68 0.19 142);
+}
+
+.dark {
+  --background: oklch(0.19 0.02 260);
+  --foreground: oklch(0.95 0.01 250);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-size: 1.15rem;
+    background-image:
+      linear-gradient(
+        color-mix(in oklab, var(--background) 92%, transparent),
+        color-mix(in oklab, var(--background) 92%, transparent)
+      ),
+      repeating-conic-gradient(
+        color-mix(in oklab, var(--stone) 30%, transparent) 0% 25%,
+        transparent 0% 50%
+      );
+    background-size:
+      auto,
+      48px 48px;
+    image-rendering: pixelated;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-pixel);
+    line-height: 1.5;
+  }
+}
+
+@utility pixel-border {
+  border: 4px solid var(--border);
+  box-shadow:
+    inset -4px -4px 0 0 color-mix(in oklab, black 35%, transparent),
+    inset 4px 4px 0 0 color-mix(in oklab, white 12%, transparent),
+    6px 6px 0 0 color-mix(in oklab, black 45%, transparent);
+}
+
+@utility pixel-inset {
+  box-shadow:
+    inset -3px -3px 0 0 color-mix(in oklab, white 10%, transparent),
+    inset 3px 3px 0 0 color-mix(in oklab, black 35%, transparent);
+}
+
+@utility text-pixel {
+  font-family: var(--font-pixel);
+  letter-spacing: 0.02em;
+}
