@@ -6,16 +6,16 @@ import { teamQuery } from "@/lib/site-data";
 export const Route = createFileRoute("/team")({
   head: () => ({
     meta: [
-      { title: "Staff Team — Login SMP" },
+      { title: "Staff Team — VAYU MC" },
       {
         name: "description",
         content:
-          "Meet the owners, admins and moderators keeping Login SMP fair, stable and friendly.",
+          "Meet the owners, admins and moderators keeping VAYU MC fair, stable and friendly.",
       },
-      { property: "og:title", content: "Staff Team — Login SMP" },
+      { property: "og:title", content: "Staff Team — VAYU MC" },
       {
         property: "og:description",
-        content: "The people behind Login SMP: owners, admins and moderators.",
+        content: "The people behind VAYU MC: owners, admins and moderators.",
       },
     ],
   }),
@@ -29,7 +29,7 @@ function TeamPage() {
     <div className="mx-auto max-w-6xl px-4 py-14">
       <PixelHeading as="h1">OUR TEAM</PixelHeading>
       <p className="mt-4 max-w-2xl text-muted-foreground">
-        The crew running Login SMP day to day. Need help in game? Ping any of them in
+        The crew running VAYU MC day to day. Need help in game? Ping any of them in
         Discord.
       </p>
 

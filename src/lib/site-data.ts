@@ -1,7 +1,7 @@
 import { queryOptions } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 
-export const SERVER_IP_FALLBACK = "play.loginsmp.fun";
+export const SERVER_IP_FALLBACK = "play.vayumc.fun";
 
 export type Settings = Record<string, string>;
 

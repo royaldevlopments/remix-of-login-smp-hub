@@ -9,16 +9,16 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/faq")({
   head: () => ({
     meta: [
-      { title: "FAQs — Login SMP" },
+      { title: "FAQs — VAYU MC" },
       {
         name: "description",
         content:
-          "Answers about joining Login SMP, store delivery times, payments and gameplay rules.",
+          "Answers about joining VAYU MC, store delivery times, payments and gameplay rules.",
       },
-      { property: "og:title", content: "FAQs — Login SMP" },
+      { property: "og:title", content: "FAQs — VAYU MC" },
       {
         property: "og:description",
-        content: "Common questions about joining and buying on Login SMP.",
+        content: "Common questions about joining and buying on VAYU MC.",
       },
     ],
   }),

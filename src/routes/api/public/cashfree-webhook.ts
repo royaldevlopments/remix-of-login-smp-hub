@@ -35,7 +35,7 @@ export const Route = createFileRoute("/api/public/cashfree-webhook")({
         const body = JSON.parse(raw) as WebhookBody;
         const orderId =
           body.data?.link_notes?.order_id ??
-          body.data?.link_id?.replace("loginsmp_", "") ??
+          body.data?.link_id?.replace("vayumc_", "") ??
           null;
         const paid =
           body.data?.link_status === "PAID" || body.data?.order?.order_status === "PAID";

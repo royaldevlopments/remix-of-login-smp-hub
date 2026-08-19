@@ -6,16 +6,16 @@ import { rulesQuery } from "@/lib/site-data";
 export const Route = createFileRoute("/rules")({
   head: () => ({
     meta: [
-      { title: "Server Rules — Login SMP" },
+      { title: "Server Rules — VAYU MC" },
       {
         name: "description",
         content:
-          "The rules every Login SMP player agrees to: no griefing, no cheating, keep chat friendly.",
+          "The rules every VAYU MC player agrees to: no griefing, no cheating, keep chat friendly.",
       },
-      { property: "og:title", content: "Server Rules — Login SMP" },
+      { property: "og:title", content: "Server Rules — VAYU MC" },
       {
         property: "og:description",
-        content: "Read the Login SMP rules before you join play.loginsmp.fun.",
+        content: "Read the VAYU MC rules before you join play.vayumc.fun.",
       },
     ],
   }),

@@ -21,13 +21,13 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/store")({
   head: () => ({
     meta: [
-      { title: "Store — Login SMP Ranks, Keys & Coins" },
+      { title: "Store — VAYU MC Ranks, Keys & Coins" },
       {
         name: "description",
         content:
-          "Buy ranks, crate keys and coins for Login SMP. Paid securely with Cashfree and delivered in game instantly.",
+          "Buy ranks, crate keys and coins for VAYU MC. Paid securely with Cashfree and delivered in game instantly.",
       },
-      { property: "og:title", content: "Store — Login SMP" },
+      { property: "og:title", content: "Store — VAYU MC" },
       {
         property: "og:description",
         content: "Ranks, crate keys and coins with instant in-game delivery.",

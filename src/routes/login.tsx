@@ -12,13 +12,13 @@ import { useAuth } from "@/hooks/use-auth";
 export const Route = createFileRoute("/login")({
   head: () => ({
     meta: [
-      { title: "Player Login — Login SMP" },
+      { title: "Player Login — VAYU MC" },
       {
         name: "description",
-        content: "Sign in to your Login SMP player account to track your store orders.",
+        content: "Sign in to your VAYU MC player account to track your store orders.",
       },
-      { property: "og:title", content: "Player Login — Login SMP" },
-      { property: "og:description", content: "Sign in to your Login SMP account." },
+      { property: "og:title", content: "Player Login — VAYU MC" },
+      { property: "og:description", content: "Sign in to your VAYU MC account." },
     ],
   }),
   component: LoginPage,

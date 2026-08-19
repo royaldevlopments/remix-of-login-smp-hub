@@ -72,7 +72,7 @@ export const createCheckout = createServerFn({ method: "POST" })
         "x-client-secret": secret,
       },
       body: JSON.stringify({
-        link_id: `loginsmp_${order.id}`,
+        link_id: `vayumc_${order.id}`,
         link_amount: Number(product.price),
         link_currency: "INR",
         link_purpose: `${product.name} for ${data.minecraftUsername}`,
@@ -83,7 +83,7 @@ export const createCheckout = createServerFn({ method: "POST" })
         },
         link_notify: { send_email: false, send_sms: false },
         link_meta: {
-          return_url: `${process.env["SITE_URL"] ?? "https://loginsmp.fun"}/order/${order.id}`,
+          return_url: `${process.env["SITE_URL"] ?? "https://vayumc.fun"}/order/${order.id}`,
         },
         link_notes: { order_id: order.id },
       }),
@@ -103,7 +103,7 @@ export const createCheckout = createServerFn({ method: "POST" })
 
     await supabaseAdmin
       .from("orders")
-      .update({ cf_order_id: `loginsmp_${order.id}` })
+      .update({ cf_order_id: `vayumc_${order.id}` })
       .eq("id", order.id);
 
     return { ok: true as const, orderId: order.id, paymentUrl: payload.link_url };

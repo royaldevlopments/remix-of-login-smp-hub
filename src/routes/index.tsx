@@ -13,17 +13,17 @@ import caveBg from "@/assets/bg-cave.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Login SMP — Minecraft Survival Server | play.loginsmp.fun" },
+      { title: "VAYU MC — Minecraft Survival Server | play.vayumc.fun" },
       {
         name: "description",
         content:
-          "Join Login SMP at play.loginsmp.fun. Lag-free survival, fair play, an active Discord and a store with instant in-game delivery.",
+          "Join VAYU MC at play.vayumc.fun. Lag-free survival, fair play, an active Discord and a store with instant in-game delivery.",
       },
-      { property: "og:title", content: "Login SMP — Minecraft Survival Server" },
+      { property: "og:title", content: "VAYU MC — Minecraft Survival Server" },
       {
         property: "og:description",
         content:
-          "Survival multiplayer at play.loginsmp.fun. Ranks, crate keys and coins delivered instantly.",
+          "Survival multiplayer at play.vayumc.fun. Ranks, crate keys and coins delivered instantly.",
       },
     ],
   }),
@@ -62,7 +62,7 @@ const quotes = [
 const steps = [
 
   { n: "01", title: "Open Minecraft", body: "Java 1.21 or Bedrock — both worlds are connected." },
-  { n: "02", title: "Add the server", body: "Multiplayer → Add Server → paste play.loginsmp.fun." },
+  { n: "02", title: "Add the server", body: "Multiplayer → Add Server → paste play.vayumc.fun." },
   { n: "03", title: "Start building", body: "No whitelist, no application. Claim land and go." },
 ];
 
@@ -110,7 +110,7 @@ function Home() {
               <span className="text-pixel text-[10px] text-accent">JAVA + BEDROCK · 1.21</span>
             </div>
             <PixelHeading as="h1" className="mt-5">
-              LOGIN SMP
+              VAYU MC
             </PixelHeading>
             <p className="mt-5 max-w-lg text-xl text-muted-foreground">
               A survival world worth logging into. Build big, trade fair, and keep what you
@@ -137,7 +137,7 @@ function Home() {
           <div className="flex justify-center">
             <img
               src={logo.url}
-              alt="Login SMP crossed swords and shield logo"
+              alt="VAYU MC crossed swords and shield logo"
               className="pixel-float w-64 drop-shadow-[8px_8px_0_rgba(0,0,0,0.5)] md:w-80"
             />
           </div>
@@ -203,7 +203,7 @@ function Home() {
         </section>
 
         <section className="py-14">
-          <PixelHeading>WHY LOGIN SMP</PixelHeading>
+          <PixelHeading>WHY VAYU MC</PixelHeading>
           <div className="mt-6 grid gap-6 md:grid-cols-2">
             {features.map((f) => (
               <PixelPanel key={f.title} className="pixel-lift flex gap-5">
