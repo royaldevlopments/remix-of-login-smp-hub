@@ -23,7 +23,7 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b-4 border-border bg-card/95 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center gap-4 px-4 py-3">
         <Link to="/" className="flex items-center gap-3">
-          <img src={logo.url} alt="VAYU MC logo" className="size-12" />
+          <img src={logo.url} alt="VAYU MC logo" className="size-14" />
           <span className="text-pixel text-sm text-primary md:text-base">VAYU MC</span>
         </Link>
 
