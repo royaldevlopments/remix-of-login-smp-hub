@@ -7,12 +7,12 @@ import { getOrderStatus } from "@/lib/checkout.functions";
 export const Route = createFileRoute("/order/$orderId")({
   head: () => ({
     meta: [
-      { title: "Order Status — Login SMP" },
+      { title: "Order Status — VAYU MC" },
       {
         name: "description",
-        content: "Check the payment and in-game delivery status of your Login SMP order.",
+        content: "Check the payment and in-game delivery status of your VAYU MC order.",
       },
-      { property: "og:title", content: "Order Status — Login SMP" },
+      { property: "og:title", content: "Order Status — VAYU MC" },
       { property: "og:description", content: "Payment and delivery status for your order." },
       { name: "robots", content: "noindex" },
     ],

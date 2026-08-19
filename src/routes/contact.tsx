@@ -14,16 +14,16 @@ import { settingsQuery, SERVER_IP_FALLBACK } from "@/lib/site-data";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Login SMP" },
+      { title: "Contact — VAYU MC" },
       {
         name: "description",
         content:
-          "Reach the Login SMP staff team about reports, appeals, store issues or partnerships.",
+          "Reach the VAYU MC staff team about reports, appeals, store issues or partnerships.",
       },
-      { property: "og:title", content: "Contact — Login SMP" },
+      { property: "og:title", content: "Contact — VAYU MC" },
       {
         property: "og:description",
-        content: "Message the Login SMP staff team.",
+        content: "Message the VAYU MC staff team.",
       },
     ],
   }),
@@ -116,7 +116,7 @@ function ContactPage() {
           <PixelPanel>
             <h2 className="text-pixel text-xs text-accent">EMAIL</h2>
             <p className="mt-3 break-all text-muted-foreground">
-              {settings?.["contact_email"] || "support@loginsmp.fun"}
+              {settings?.["contact_email"] || "support@vayumc.fun"}
             </p>
           </PixelPanel>
           <PixelPanel>

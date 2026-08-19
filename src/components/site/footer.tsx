@@ -14,8 +14,8 @@ export function Footer() {
       <div className="mx-auto grid max-w-6xl gap-8 px-4 py-10 md:grid-cols-4">
         <div className="md:col-span-2">
           <div className="flex items-center gap-3">
-            <img src={logo.url} alt="Login SMP logo" className="size-14" />
-            <span className="text-pixel text-sm text-primary">LOGIN SMP</span>
+            <img src={logo.url} alt="VAYU MC logo" className="size-14" />
+            <span className="text-pixel text-sm text-primary">VAYU MC</span>
           </div>
           <p className="mt-4 max-w-sm text-muted-foreground">
             A survival multiplayer world built for long-term bases, fair play and a
@@ -52,7 +52,7 @@ export function Footer() {
         </div>
       </div>
       <div className="border-t-4 border-border py-4 text-center text-sm text-muted-foreground">
-        © {new Date().getFullYear()} Login SMP · {ip} · Not affiliated with Mojang or Microsoft.
+        © {new Date().getFullYear()} VAYU MC · {ip} · Not affiliated with Mojang or Microsoft.
       </div>
     </footer>
   );

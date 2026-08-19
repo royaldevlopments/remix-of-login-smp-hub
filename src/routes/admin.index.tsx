@@ -15,13 +15,13 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/admin/")({
   head: () => ({
     meta: [
-      { title: "Admin Panel — Login SMP" },
+      { title: "Admin Panel — VAYU MC" },
       {
         name: "description",
-        content: "Manage the Login SMP store, pages, orders and settings.",
+        content: "Manage the VAYU MC store, pages, orders and settings.",
       },
-      { property: "og:title", content: "Admin Panel — Login SMP" },
-      { property: "og:description", content: "Login SMP staff control panel." },
+      { property: "og:title", content: "Admin Panel — VAYU MC" },
+      { property: "og:description", content: "VAYU MC staff control panel." },
       { name: "robots", content: "noindex" },
     ],
   }),

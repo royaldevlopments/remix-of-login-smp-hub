@@ -12,12 +12,12 @@ import { useAuth } from "@/hooks/use-auth";
 export const Route = createFileRoute("/admin/login")({
   head: () => ({
     meta: [
-      { title: "Staff Login — Login SMP" },
+      { title: "Staff Login — VAYU MC" },
       {
         name: "description",
-        content: "Restricted staff area for managing the Login SMP website and store.",
+        content: "Restricted staff area for managing the VAYU MC website and store.",
       },
-      { property: "og:title", content: "Staff Login — Login SMP" },
+      { property: "og:title", content: "Staff Login — VAYU MC" },
       { property: "og:description", content: "Restricted staff area." },
       { name: "robots", content: "noindex" },
     ],
